@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ne" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>नेपाल परिचय — डिजिटल पुस्तक</title>
+<meta name="description" content="नेपाल परिचय — नेपाल सरकारद्वारा प्रकाशित नेपालको परिचयात्मक पुस्तक। भूगोल, इतिहास, संस्कृति, कला र थप जानकारी।">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇳🇵</text></svg>">
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Menu">☰</button>
+  <a class="header-logo" href="index.html">
+    <span class="logo-flag">🇳🇵</span>
+    <div>
+      <div class="logo-text">नेपाल परिचय</div>
+      <div class="logo-sub">Nepal Parichay · 2082</div>
+    </div>
+  </a>
+  <div class="header-center">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="search-input" 
+             placeholder="खोज्नुहोस्... (Search)" autocomplete="off">
+      <div class="search-results-dropdown" id="search-dropdown"></div>
+    </div>
+  </div>
+  <div class="header-actions">
+    <a class="btn-icon" href="nepal-map.html" title="Interactive Map" target="_blank">🗺️</a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<div class="app-layout">
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>नेपाल परिचय</h2>
+      <p>13औं संस्करण · २०८२</p>
+    </div>
+
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch1.html">
+        <span class="nav-ch-icon">🏔️</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद १</div>
+          <div class="nav-ch-title">भौगोलिक परिचय</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch2.html">
+        <span class="nav-ch-icon">📜</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद २</div>
+          <div class="nav-ch-title">ऐतिहासिक रूपरेखा</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch3.html">
+        <span class="nav-ch-icon">⚖️</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद ३</div>
+          <div class="nav-ch-title">संवैधानिक विकास</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch4.html">
+        <span class="nav-ch-icon">🏛️</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद ४</div>
+          <div class="nav-ch-title">सार्वजनिक प्रशासन</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch5.html">
+        <span class="nav-ch-icon">💰</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद ५</div>
+          <div class="nav-ch-title">आर्थिक विकास</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch6.html">
+        <span class="nav-ch-icon">🎭</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद ६</div>
+          <div class="nav-ch-title">सामाजिक जीवन</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch7.html">
+        <span class="nav-ch-icon">🎨</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद ७</div>
+          <div class="nav-ch-title">भाषा, साहित्य र कला</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch8.html">
+        <span class="nav-ch-icon">🏗️</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद ८</div>
+          <div class="nav-ch-title">पूर्वाधार विकास</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch9.html">
+        <span class="nav-ch-icon">📡</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद ९</div>
+          <div class="nav-ch-title">आमसञ्चार</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch10.html">
+        <span class="nav-ch-icon">🌐</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद १०</div>
+          <div class="nav-ch-title">परराष्ट्र नीति</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+    <div class="nav-chapter">
+      <a class="nav-chapter-header" href="chapters/ch11.html">
+        <span class="nav-ch-icon">✈️</span>
+        <div class="nav-ch-info">
+          <div class="nav-ch-num">परिच्छेद ११</div>
+          <div class="nav-ch-title">पर्यटकीय स्थानहरु</div>
+        </div>
+        <span class="nav-ch-arrow">▶</span>
+      </a>
+    </div>
+
+    <div class="nav-special">
+      <a class="nav-special-btn" href="nepal-map.html" target="_blank">
+        <span>🗺️</span> नेपाल अन्तरक्रियात्मक नक्सा
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Hero -->
+    <section class="home-hero">
+      <div class="home-hero-flag">🇳🇵</div>
+      <h1>नेपाल परिचय</h1>
+      <p class="home-hero-sub">Nepal Parichay · 13th Edition · 2082 BS</p>
+      <p class="home-hero-desc">
+        नेपाल सरकारको सञ्चार तथा सूचना प्रविधि मन्त्रालय अन्तर्गत सूचना तथा प्रसारण विभागद्वारा प्रकाशित नेपालको समग्र परिचय। भूगोलदेखि इतिहास, संस्कृतिदेखि अर्थव्यवस्थासम्मको विस्तृत जानकारी।
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">११</div>
+          <div class="hero-stat-label">परिच्छेद</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">४२०+</div>
+          <div class="hero-stat-label">पृष्ठ</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">१६०</div>
+          <div class="hero-stat-label">चित्र</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">७७</div>
+          <div class="hero-stat-label">जिल्ला</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="home-body">
+
+      <!-- Interactive Map Feature -->
+      <div class="map-feature">
+        <div class="map-feature-header">
+          <div>
+            <h2>🗺️ अन्तरक्रियात्मक नेपाल नक्सा</h2>
+            <p>७७ जिल्ला · ७ प्रदेश · तथ्याङ्क अन्वेषण गर्नुहोस्</p>
+          </div>
+          <a class="btn-explore" href="nepal-map.html" target="_blank">
+            पूर्ण नक्सा हेर्नुहोस् →
+          </a>
+        </div>
+        <iframe 
+          class="map-preview-frame" 
+          src="nepal-map.html" 
+          title="Nepal Interactive Map"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Chapters -->
+      <div class="section-label">सामग्री</div>
+      <h2 class="section-title">परिच्छेदहरू</h2>
+
+      <div class="chapters-grid">
+
+        <a class="chapter-card" href="chapters/ch1.html">
+          <span class="cc-icon">🏔️</span>
+          <div class="cc-num">परिच्छेद १</div>
+          <div class="cc-title">नेपालको भौगोलिक परिचय</div>
+          <div class="cc-short">भूगोल · हिमाल, पहाड, तराई</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch2.html">
+          <span class="cc-icon">📜</span>
+          <div class="cc-num">परिच्छेद २</div>
+          <div class="cc-title">नेपालको ऐतिहासिक रूपरेखा</div>
+          <div class="cc-short">इतिहास · गोपाल, लिच्छवि, मल्ल, शाह</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch3.html">
+          <span class="cc-icon">⚖️</span>
+          <div class="cc-num">परिच्छेद ३</div>
+          <div class="cc-title">नेपालको संवैधानिक विकासक्रम</div>
+          <div class="cc-short">संविधान · शासन व्यवस्था</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch4.html">
+          <span class="cc-icon">🏛️</span>
+          <div class="cc-num">परिच्छेद ४</div>
+          <div class="cc-title">नेपालको सार्वजनिक प्रशासन</div>
+          <div class="cc-short">प्रशासन · सरकारी संरचना</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch5.html">
+          <span class="cc-icon">💰</span>
+          <div class="cc-num">परिच्छेद ५</div>
+          <div class="cc-title">नेपालको आर्थिक विकास</div>
+          <div class="cc-short">अर्थव्यवस्था · कृषि, उद्योग, व्यापार</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch6.html">
+          <span class="cc-icon">🎭</span>
+          <div class="cc-num">परिच्छेद ६</div>
+          <div class="cc-title">नेपालको सामाजिक जीवन तथा संस्कृति</div>
+          <div class="cc-short">समाज · जाति, भेषभूषा, चाडपर्व</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch7.html">
+          <span class="cc-icon">🎨</span>
+          <div class="cc-num">परिच्छेद ७</div>
+          <div class="cc-title">नेपालका भाषा, साहित्य र कला</div>
+          <div class="cc-short">भाषा · साहित्य, चलचित्र, कला</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch8.html">
+          <span class="cc-icon">🏗️</span>
+          <div class="cc-num">परिच्छेद ८</div>
+          <div class="cc-title">नेपालमा पूर्वाधार विकास</div>
+          <div class="cc-short">शिक्षा · स्वास्थ्य, यातायात, खेलकुद</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch9.html">
+          <span class="cc-icon">📡</span>
+          <div class="cc-num">परिच्छेद ९</div>
+          <div class="cc-title">नेपालमा आमसञ्चार र पत्रकारिता</div>
+          <div class="cc-short">सञ्चार · रेडियो, टेलिभिजन, पत्रिका</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch10.html">
+          <span class="cc-icon">🌐</span>
+          <div class="cc-num">परिच्छेद १०</div>
+          <div class="cc-title">नेपालको परराष्ट्र नीति</div>
+          <div class="cc-short">परराष्ट्र नीति · अन्तर्राष्ट्रिय सम्बन्ध</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+        <a class="chapter-card" href="chapters/ch11.html">
+          <span class="cc-icon">✈️</span>
+          <div class="cc-num">परिच्छेद ११</div>
+          <div class="cc-title">ऐतिहासिक, धार्मिक तथा पर्यटकीय स्थानहरु</div>
+          <div class="cc-short">पर्यटन · धार्मिक स्थल, प्रकृति</div>
+          <div class="cc-arrow">पढ्नुहोस् <span>→</span></div>
+        </a>
+
+      </div>
+
+      <!-- About Box -->
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;margin-bottom:40px;">
+        <div class="section-label">पुस्तकको बारे</div>
+        <h3 style="font-family:var(--font-display);font-size:22px;color:var(--crimson-dark);margin-bottom:16px;">नेपाल परिचय — परिमार्जित तेह्रौं संस्करण</h3>
+        <p style="font-family:var(--font-body);font-size:16px;line-height:1.9;color:var(--ink-mid);margin-bottom:12px;">
+          यो पुस्तक मुलुकको विविधतायुक्त पहिचान प्रस्तुत गर्ने प्रयोजनका लागि प्रकाशन गरिँदै आएको छ। मुलुकको भौगोलिक, सामाजिक, सांस्कृतिक, राजनैतिक, आर्थिक तथा संवैधानिक विकासक्रमलगायतका विविध आयाममाथि यो पुस्तक सङ्क्षिप्त जानकारीमूलक र सत्यतथ्य विषयवस्तुहरूलाई समेट्न सक्षम बनाउने लक्ष्य राखिएको छ।
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;">
+          <div style="background:var(--parchment-dark);border-radius:var(--radius);padding:10px 16px;font-family:var(--font-ui);font-size:13px;color:var(--ink-mid);">
+            <strong style="color:var(--crimson);">प्रकाशक:</strong> सूचना तथा प्रसारण विभाग
+          </div>
+          <div style="background:var(--parchment-dark);border-radius:var(--radius);padding:10px 16px;font-family:var(--font-ui);font-size:13px;color:var(--ink-mid);">
+            <strong style="color:var(--crimson);">संस्करण:</strong> परिमार्जित तेह्रौं, २०८२ असार
+          </div>
+          <div style="background:var(--parchment-dark);border-radius:var(--radius);padding:10px 16px;font-family:var(--font-ui);font-size:13px;color:var(--ink-mid);">
+            <strong style="color:var(--crimson);">वेब:</strong> www.doib.gov.np
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /home-body -->
+  </main>
+</div><!-- /app-layout -->
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img class="lightbox-img" src="" alt="">
+  <div class="lightbox-caption"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.43/dist/flexsearch.bundle.js"></script>
+<script src="src/app.js"></script>
+<script src="src/search.js"></script>
+</body>
+</html>
